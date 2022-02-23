@@ -1,0 +1,122 @@
+@import "../Variables/Variables.scss";
+
+.footer{
+        width: 100%;
+        height:1000px;
+        background-attachment: fixed;
+        display: flex;
+        justify-content:center;
+        align-items: center;
+        background-image: url(/public/images/fotter.jpg);
+        background-size: 100% 100%;
+        form{
+                width:30%;
+                height:600px;
+                display:flex;
+                flex-direction: column;
+                align-items:center;
+                justify-content: center;
+                background-color: rgba(0,0,0,0.3);
+                backdrop-filter: blur(4px);
+                cursor: pointer;
+                input{
+                        margin-bottom: 1rem;
+                        width: 50%;
+                        padding: 10px;
+                        background-color:transparent;
+                        border: none;
+                        outline:none;
+                        border-bottom: 2px solid gray; 
+                        color:bisque; 
+                        font-size:1.2rem;
+                }
+                input:hover,
+                textarea:hover{
+                        background-color: rgba(255,255,255,0.5);
+                }
+                textarea{
+                        width: 50%;
+                        height:100px;
+                        resize: none;
+                        padding: 10px;
+                        border: none;
+                        background-color: transparent;
+                        font-size: 1.2rem;
+                        outline:none;
+                        margin-bottom: 1rem;
+                        color:#000;
+                        border-bottom: 2px solid gray; 
+
+                }
+                button{
+                        @include signbtn();
+                        padding: 1rem 5rem;
+                        background-color: #1B7077;
+                        
+                }
+                button:hover{
+                        background-color:#268c96;
+                        color:#fff;
+                }
+            
+
+
+        }
+        .contact_us{
+                width:20%;
+                height:600px;
+                display:flex;
+                flex-direction: column;
+                align-items:center;
+                justify-content: center;
+                background-color: rgba(255,255,255,0.5);
+                backdrop-filter: blur(4px);
+                transition: all 0.5s !important;
+
+                a{
+                        display:flex;
+                        color:#000 !important;
+                        font-weight: bold;
+                        text-decoration: none;
+                        margin-bottom: 1rem;
+                        font-size: 1.2rem;
+                        transition: all 0.5s !important;
+                        p{
+                                margin-left: 5px;
+                        }
+                        
+
+                }
+                a:hover{
+                        text-decoration:underline;
+                        .icons{
+                                transform:scale(1.2) rotate(360deg);
+
+                        }
+                }
+        }
+
+
+}
+@media  all and(max-width:1250px){
+        .footer{
+                flex-direction: column;
+                form{
+                        width: 50%;
+                        margin: 2rem 0 2rem 0;
+                }
+                .contact_us{
+                        width: 50%;
+                }
+        }
+}
+@media  all and(max-width:750px){
+        .footer{
+                form{
+                        width: 90%;
+                }
+                .contact_us{
+                        width: 90%;
+                }
+        }
+}

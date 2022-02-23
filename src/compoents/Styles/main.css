@@ -1,0 +1,31 @@
+.main1 {
+  background-image: -webkit-gradient(linear, left top, right top, from(#161C24), to(#d9e1eb));
+  background-image: linear-gradient(to right, #161C24, #d9e1eb);
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.main2 {
+  background-image: url(/public/images/banner-bg.jpg);
+  width: 100%;
+  height: 1000px;
+  background-size: 100% 100%;
+  background-attachment: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+/*# sourceMappingURL=main.css.map */

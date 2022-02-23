@@ -1,0 +1,96 @@
+.signin,
+.signup{
+  width:100%;
+  height:100vh ;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  background-size: 100% 100% ;
+  position:fixed;
+  top: 0;
+  z-index: -1;
+  background-image:url("/public/images/login_image.jpg");
+}
+.mainsignin,
+.mainsignup{
+  width:500px;
+  height: 50vh;
+  background-color:rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 0.2em;
+}
+.mainsignup{
+  height:70vh ;
+}
+.inputvalid{
+  border:1px solid rgb(89, 224, 89) !important;
+}
+.inputisinvalid{
+  border:1px solid rgb(235, 40, 40) !important;
+}
+.mainsignin input,
+.mainsignup input {
+  margin-bottom: 1em;
+  border:none;
+  outline: none;
+  width: 50%;
+  font-size: 1.1em;
+  border-radius: 0.2em;
+  padding: 0.2em 0;
+}
+.intothesignin{
+  color:red;
+  text-decoration: none;
+  font-size: 1rem;
+  bottom: 1em;
+  position:absolute;
+  font-size: 1.2em;
+}
+.intothesignin:hover{
+  color:gray;
+}
+.loginbtn{
+  background-color:#4EC274;
+  border:none;
+  outline: none;
+  padding: 0.5em 3em;
+  color:#fff;
+  border-radius:0.3rem;
+  font-size: 1em;
+  cursor: pointer;
+  text-decoration: none;
+  
+}
+.loginbtn:hover{
+  background-color: #45aa66;
+  color:#171717;
+  font-weight: 500;
+}
+.passnottru{
+  color:#E01D06;
+}
+.goHome{
+        background-color:rgba(0,0,0,0.5);
+        backdrop-filter: blur(4px);
+        width: 50px;
+        width: 50px;
+        padding:1rem;
+        cursor: pointer;
+        position:fixed;
+        left:100px;
+        top:100px;
+        text-decoration: none;
+        font-size:1.3em;
+        color:rgb(89, 224, 89);
+        transition: all 0.5s;
+        border-radius: 10px;
+
+}
+.goHome:hover{
+        transform: scale(1.2);
+        color:#45aa66;
+}

@@ -1,0 +1,17 @@
+$backgroundColor:#161C24;
+$backgroundColor2:#d9e1eb;
+
+
+$backgroundColorusers:#c53636;
+
+
+@mixin signbtn {
+        border: none;
+        font-size:1.3em;
+        padding:0.8rem 2.5rem;
+        cursor: pointer;
+        background-color:#8DD8F8;
+        border-radius: 5px;
+        transition: all 0.5s;
+
+}

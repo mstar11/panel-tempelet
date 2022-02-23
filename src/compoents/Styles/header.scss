@@ -1,0 +1,177 @@
+@import "../Variables/Variables.scss";
+
+*{
+        margin: 0;
+        padding:0;
+}
+.contetn-header{
+        position: relative;
+        // width: 100%;
+}
+.header { 
+        width: 100%;
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+        padding:2rem 1rem 2rem 1rem;
+        position:fixed;
+        top:0px;
+        transition: all 0.5 ease;
+        
+        
+        .logo {
+                margin-left: 100px;
+                display: flex;
+                position: relative;
+                a{
+                        
+                        display:flex;
+                        color:#000;
+                        text-decoration:none;
+                        font-size: 1.5rem;
+                        transition: scale 0.5s ease-in-out;
+                        p{
+                                margin-left: 0.5em;
+                        }       
+                }
+                a:hover{
+                        transform: scale(1.2);
+                }
+        }
+        .logo.active{
+                visibility: hidden;
+        }
+       
+        .left-header{
+                width: 80%;
+                display:flex;
+                margin-right: 2.5rem;
+                justify-content:flex-end;
+                align-items: center;
+                transition: background-color 0.5s;
+                a {
+                        padding: 0 2rem;
+                        cursor: pointer;
+                }
+                .btnHeader{
+                        @include signbtn();
+                        text-decoration: none;
+                        color: #fff;
+
+
+                }
+                .btnHeader:hover{
+                        background-color:#00AEEF;
+                        color: #000 !important;;
+                }
+        }
+}
+.header.active{
+        background-color: rgba(255,255,255,0.5);
+        backdrop-filter: blur(4px);
+        z-index: 11;
+}
+.left-header-response{
+        display:none;
+}
+.sidebar-content{
+        width: 100%;
+        height: 1000px;
+        // background-attachment: fixed;
+        // position: fixed;
+     
+}
+.sidebar{
+       left:-300px;
+       transition: all 0.5s;
+       width:200px;
+        background-color:rgba(255,255,255,0.5);
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content:flex-start;
+        position:fixed;
+        height:100%;
+        .logo{
+                margin-top: 1rem;
+        }
+        .logo a{
+                
+                text-decoration: none;
+                color:#000;
+                p{
+                        margin-left: -13px;
+                        margin-bottom: 3rem;
+                }
+               
+                
+        }
+        .btnleftsideheader {
+                @include signbtn();
+                padding:0.5rem 1.5rem;
+                font-size:1rem;
+                margin-bottom: 3rem;
+                color:#fff;
+                text-decoration: none;
+        }
+        .btnleftsideheader:hover{
+                background-color:#00AEEF;
+                        color:#000;
+        }
+}
+.sidebar.active{
+        left: 0px;
+        z-index: 100;
+}
+.sidebar-content-remove{
+        width: 0;
+        height: 100%;
+        background-color:rgba(0,0,0,0.5);
+        position:fixed;
+        z-index: 5;
+}
+.sidebar-content-remove.active{
+        width: 100%;
+}
+.sidebar-items{
+        display:flex;
+        flex-direction: column;
+        align-items: flex-start;
+        a{
+                color:#fff;
+                margin-bottom: 2rem;
+                font-weight: 600;
+        }
+        a:hover{
+                color:black;
+                cursor: pointer;
+        }
+}
+
+// =======================media ================
+@media all and(max-width:1150px){
+        .left-header-response{
+                display:block;
+                cursor: pointer;
+                margin-right: 1rem;
+                .menuicone{
+                        font-size: 3rem;
+                        transition: all 0.5s;
+
+                }
+                .menuicone:hover{
+                        transform: scale(1.2)
+                }
+             
+                
+        }
+        .left-header{
+                display:none !important;
+        }
+        .header .logo {
+                margin-left:0;
+                a{
+                        font-size:1rem;
+                }
+        }
+}
